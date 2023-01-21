@@ -20,7 +20,7 @@ function styles() {
 			overrideBrowserslist: ['last 10 version'],
 			grid: true
 		}))
-    .pipe(dest('src/css'))
+    .pipe(dest('src/styles/css'))
 		.pipe(browserSync.stream())
 }
 
@@ -59,7 +59,7 @@ function fonts() {
 }
 
 function watching() {
-  watch(['src/scss/**/*.scss'], styles)
+  watch(['src/styles/scss/**/*.scss'], styles)
   watch(['src/js/components/*.js'], scripts)
   watch('src/index.html').on('change', browserSync.reload)
 }

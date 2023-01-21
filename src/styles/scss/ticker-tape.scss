@@ -1,0 +1,78 @@
+$speed: 120s;
+
+@font-face {
+	font-family: 'Arialic Hollow';
+	src: url(../../assets/fonts/Arialic\ Hollow.woff2);
+	font-size: normal;
+}
+
+.black-text {
+	color: #000;
+}
+
+.outline-text {
+	font-family: Arialic Hollow;
+}
+
+.ticker-tape {
+	width: 100%;
+	overflow: hidden;
+}
+
+.ticker-tape__ticker {
+	height: 160px;
+	white-space: nowrap;
+	line-height: 160px;
+	animation-name: ticker;
+	animation-duration: $speed;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: backwards;
+}
+
+.ticker-tape__ticker--reverse {
+	animation-name: ticker--reverse;
+	animation-duration: $speed;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: backwards;
+}
+
+.ticker__item {
+	display: inline-block;
+	padding: 0 1;
+	font-size: 8rem;
+	font-weight: 900;
+	// letter-spacing: 1rem;
+	color: #FFF;
+}
+
+@keyframes ticker {
+	0% {
+		transform: translateX(0);
+		visibility: visible;
+	}
+	50% {
+		transform: translateX(-350%);
+		visibility: visible;
+	}
+	100% {
+		transform: translateX(0);
+		visibility: visible;
+	}
+}
+
+@keyframes ticker--reverse {
+	0% {
+		transform: translateX(-350%);
+		visibility: visible;
+	}
+	50% {
+		transform: translateX(0);
+		visibility: visible;
+	}
+	100% {
+		transform: translateX(-350%);
+		visibility: visible;
+	}
+}
