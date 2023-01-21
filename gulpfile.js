@@ -61,6 +61,7 @@ function fonts() {
 function watching() {
   watch(['src/styles/scss/**/*.scss'], styles)
   watch(['src/js/components/*.js'], scripts)
+  watch(['src/js/components/*.js']).on('change', browserSync.reload)
   watch('src/index.html').on('change', browserSync.reload)
 }
 
