@@ -29,6 +29,11 @@ body {
 	overflow-x: hidden;
 }
 
+.adidas-logo {
+	width: 90px;
+	position: absolute;
+}
+
 .gradient-bg {
 	margin: 0;
 	padding: 50px 0;
@@ -48,6 +53,12 @@ body {
 	margin: 0 auto;
 	padding: 50px;
 	box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+	.wrapper {
+		padding: 20px;
+	}
 }
 
 .main-title {
@@ -71,7 +82,7 @@ body {
 	position: relative;
 	min-height: 330px;
 
-	img {
+	.hero-sneaker {
 		max-height: 100%;
 		max-width: 100%;
 		position: absolute;
@@ -80,6 +91,7 @@ body {
 		transform: translateX(-50%) translateY(-50%);
 	}
 }
+
 
 .swiper {
 	width: 100%;
@@ -190,12 +202,30 @@ body {
 }
 
 .product-info {
-	display: grid;
-	grid-template: repeat(2, auto) / repeat(2, auto);
-	column-gap: 60px;
+	position: relative;
+	.wrapper {
+		display: grid;
+		grid-template: repeat(2, auto) / repeat(2, auto);
+		column-gap: 60px;
+	}
 
 	.main-title {
 		text-align: start;
+	}
+
+	.adidas-logo-1 {
+		left: 120px;
+		bottom: -30px;
+	}
+	.adidas-logo-2 {
+		right: 120px;
+		top: -30px;
+	}
+}
+
+@media (max-width: 1080px) {
+	.adidas-logo {
+		display: none;
 	}
 }
 
@@ -217,7 +247,9 @@ body {
 }
 @media (max-width: 1080px) {
 	.product-info {
-		grid-template: repeat(3, auto) / repeat(1, auto);
+		.wrapper {
+			grid-template: repeat(3, auto) / repeat(1, auto);
+		}
 
 		.main-title {
 			text-align: center;
