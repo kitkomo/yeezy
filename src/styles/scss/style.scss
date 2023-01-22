@@ -2,14 +2,20 @@
 
 @font-face {
 	font-family: 'Montseratt';
-	src: url(../../assets/fonts/Montserrat-Regular.ttf);
+	src: 
+		url(../../assets/fonts/Montserrat-Regular.woff2),
+		url(../../assets/fonts/Montserrat-Regular.woff),
+		url(../../assets/fonts/Montserrat-Regular.ttf);
 	font-style: normal;
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: 'Montseratt';
-	src: url(../../assets/fonts/Montserrat-Bold.ttf);
+	src:
+		url(../../assets/fonts/Montserrat-Bold.woff2),
+		url(../../assets/fonts/Montserrat-Bold.woff),
+		url(../../assets/fonts/Montserrat-Bold.ttf);
 	font-style: normal;
 	font-weight: 700;
 }
