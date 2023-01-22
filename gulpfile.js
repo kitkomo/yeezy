@@ -75,8 +75,11 @@ function browsersync() {
 
 function build() {
 	return src([
-		'src/css/style.min.css',
+		'src/styles/css/style.min.css',
+		'src/styles/css/swiper.min.css',
 		'src/js/main.min.js',
+		'src/js/gsap.min.js',
+		'src/js/swiper.min.js',
 		'src/index.html',
 		'src/assets/fonts/*.*'
 	], {base: 'src'})
